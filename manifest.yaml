@@ -67,6 +67,9 @@ spec:
       containers:
       - name: websocket-client
         image: registry.platform.tatar.ru/public/websocket-client:latest
+        env:
+          - name: SERVER_URL
+            value: "ws://websocket-server:8765"
         imagePullPolicy: IfNotPresent
         resources:
           requests:
