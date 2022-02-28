@@ -44,7 +44,7 @@ spec:
     port: 8765
     targetPort: 8765
   selector:
-    app: identity
+    app: websocket-server
   type: ClusterIP
   sessionAffinity: None
 ---
