@@ -1,0 +1,12 @@
+version: '3'
+services:
+  client:
+    image: registry.platform.tatar.ru/public/websocket-client:latest
+    environment:
+      SERVER_URL: ws://server:8765
+    depends_on:
+      - server
+
+  server:
+    image: registry.platform.tatar.ru/public/websocket-server:latest
+    restart: always
